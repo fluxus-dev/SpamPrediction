@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fbfce97-c25b-41af-99df-583a1d5277f2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SpamOrHam.py" afterDir="false" />
-    </list>
+    <list default="true" id="9fbfce97-c25b-41af-99df-583a1d5277f2" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SpamOrHam.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="21" selection-start-line="21" selection-start-column="1" selection-end-line="23" selection-end-column="12" />
+            <state relative-caret-position="494">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -89,6 +87,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -205,8 +204,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SpamOrHam.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" selection-start-line="21" selection-start-column="1" selection-end-line="23" selection-end-column="12" />
+        <state relative-caret-position="494">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
