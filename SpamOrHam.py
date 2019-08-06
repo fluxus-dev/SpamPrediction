@@ -22,7 +22,7 @@ if not os.path.isfile('new_blog_spam5.txt'):
         f.write(new_line)
     f.close()
 
-df = pd.read_csv("new_blog_spam.txt", sep='\t', names=["type", "label", "docid", "docs"])
+df = pd.read_csv("new_blog_spam .txt", sep='\t', names=["type", "label", "docid", "docs"])
 
 df['length'] = df['docs'].apply(len)
 print(df.groupby("label").describe())
@@ -65,14 +65,18 @@ print('\n')
 
 
 def binary_classifier(df):
-    global bow_transformer
-    global docs_bow
 
+    global train_set
+
+    cv = CountVectorizer()
+    bow_transformer = cv.fit(train_set['docs'])
+    docs_bow = bow_transformer.transform(train_set['docs'])
+    docs_test = bow_transformer.transform(df['docs'])
 
     ### 정상 비정상 분류
-    normal_label = np.where(df['label'] == '정상', '정상', '비정상')
+    normal_label = np.where(train_set['label'] == '정상', '정상', '비정상')
     normal_detect_model = MultinomialNB().fit(docs_bow, normal_label)
-    normal_predictions = normal_detect_model.predict(docs_bow)
+    normal_predictions = normal_detect_model.predict(docs_test)
     normal_selector = []
 
     for i in range(len(normal_predictions)):
@@ -218,7 +222,7 @@ def binary_classifier(df):
             normal_predictions[i] = gamble_predictions[j]
             j += 1
         i += 1
-
+    print(i)
 
 
     ### 비도박데이터 Bag of words
@@ -425,5 +429,5 @@ def binary_classifier_tfidf(df):
 
     return normal_predictions
 
-print(classification_report(train_set['label'], binary_classifier(train_set)))
+print(classification_report(test_set['label'], binary_classifier(test_set)))
 

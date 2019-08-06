@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fbfce97-c25b-41af-99df-583a1d5277f2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpamOrHam.py" beforeDir="false" afterPath="$PROJECT_DIR$/SpamOrHam.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new_blog_spam.txt" beforeDir="false" afterPath="$PROJECT_DIR$/new_blog_spam.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SpamOrHam.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="31" column="26" lean-forward="true" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+            <state relative-caret-position="301">
+              <caret line="246" column="14" lean-forward="true" selection-start-line="246" selection-start-column="14" selection-end-line="246" selection-end-column="14" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -88,6 +86,11 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>청소년</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -281,8 +284,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SpamOrHam.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="31" column="26" lean-forward="true" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+        <state relative-caret-position="301">
+          <caret line="246" column="14" lean-forward="true" selection-start-line="246" selection-start-column="14" selection-end-line="246" selection-end-column="14" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
