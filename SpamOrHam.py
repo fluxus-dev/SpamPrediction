@@ -65,7 +65,6 @@ print('\n')
 
 
 def binary_classifier(df):
-
     global train_set
 
     cv = CountVectorizer()
@@ -111,14 +110,11 @@ def binary_classifier(df):
             j += 1
         i += 1
 
-
-
     ### 비대량데이터 Bag of words
     spam_train_set_2 = spam_train_set[spam_train_set['label'] != '대량']
     spam_bow_transformer_2 = cv.fit(spam_train_set_2['docs'])
     spam_docs_bow_2 = spam_bow_transformer_2.transform(spam_train_set_2['docs'])
     spam_docs_test_2 = spam_bow_transformer_2.transform(next_set['docs'])
-
 
     ### 불법 합법 분류
     illegal_label = np.where(spam_train_set_2['label'] == '불법', '불법', '합법')
@@ -140,13 +136,11 @@ def binary_classifier(df):
             j += 1
         i += 1
 
-
     ### 비불법데이터 Bag of words
     spam_train_set_3 = spam_train_set_2[spam_train_set_2['label'] != '불법']
     spam_bow_transformer_3 = cv.fit(spam_train_set_3['docs'])
     spam_docs_bow_3 = spam_bow_transformer_3.transform(spam_train_set_3['docs'])
     spam_docs_test_3 = spam_bow_transformer_3.transform(next_set['docs'])
-
 
     ### 도배 비도배 분류
     duplicate_label = np.where(spam_train_set_3['label'] == '도배', '도배', '비도배')
@@ -194,14 +188,11 @@ def binary_classifier(df):
             j += 1
         i += 1
 
-
-
     ### 비홍보데이터 Bag of words
     spam_train_set_5 = spam_train_set_4[spam_train_set_4['label'] != '홍보']
     spam_bow_transformer_5 = cv.fit(spam_train_set_5['docs'])
     spam_docs_bow_5 = spam_bow_transformer_5.transform(spam_train_set_5['docs'])
     spam_docs_test_5 = spam_bow_transformer_5.transform(next_set['docs'])
-
 
     ### 도박 비도박 분류
     gamble_label = np.where(spam_train_set_5['label'] == '도박', '도박', '비도박')
@@ -224,13 +215,11 @@ def binary_classifier(df):
         i += 1
     print(i)
 
-
     ### 비도박데이터 Bag of words
     spam_train_set_6 = spam_train_set_5[spam_train_set_5['label'] != '도박']
     spam_bow_transformer_6 = cv.fit(spam_train_set_6['docs'])
     spam_docs_bow_6 = spam_bow_transformer_6.transform(spam_train_set_6['docs'])
     spam_docs_test_6 = spam_bow_transformer_6.transform(next_set['docs'])
-
 
     ### 청소년 유해 여부 분류
     harm_label = np.where(spam_train_set_6['label'] == '청소년유해', '청소년유해', '건전')
@@ -252,7 +241,6 @@ def binary_classifier(df):
 def binary_classifier_tfidf(df):
     global bow_transformer
     global docs_bow
-
 
     ### 정상 비정상 분류
     normal_label = np.where(df['label'] == '정상', '정상', '비정상')
@@ -292,14 +280,11 @@ def binary_classifier_tfidf(df):
             j += 1
         i += 1
 
-
-
     ### 비대량데이터 Bag of words
     spam_train_set_2 = spam_train_set[spam_train_set['label'] != '대량']
     spam_bow_transformer_2 = cv.fit(spam_train_set_2['docs'])
     spam_docs_bow_2 = spam_bow_transformer_2.transform(spam_train_set_2['docs'])
     spam_docs_test_2 = spam_bow_transformer_2.transform(next_set['docs'])
-
 
     ### 불법 합법 분류
     illegal_label = np.where(spam_train_set_2['label'] == '불법', '불법', '합법')
@@ -321,13 +306,11 @@ def binary_classifier_tfidf(df):
             j += 1
         i += 1
 
-
     ### 비불법데이터 Bag of words
     spam_train_set_3 = spam_train_set_2[spam_train_set_2['label'] != '불법']
     spam_bow_transformer_3 = cv.fit(spam_train_set_3['docs'])
     spam_docs_bow_3 = spam_bow_transformer_3.transform(spam_train_set_3['docs'])
     spam_docs_test_3 = spam_bow_transformer_3.transform(next_set['docs'])
-
 
     ### 도배 비도배 분류
     duplicate_label = np.where(spam_train_set_3['label'] == '도배', '도배', '비도배')
@@ -375,14 +358,11 @@ def binary_classifier_tfidf(df):
             j += 1
         i += 1
 
-
-
     ### 비홍보데이터 Bag of words
     spam_train_set_5 = spam_train_set_4[spam_train_set_4['label'] != '홍보']
     spam_bow_transformer_5 = cv.fit(spam_train_set_5['docs'])
     spam_docs_bow_5 = spam_bow_transformer_5.transform(spam_train_set_5['docs'])
     spam_docs_test_5 = spam_bow_transformer_5.transform(next_set['docs'])
-
 
     ### 도박 비도박 분류
     gamble_label = np.where(spam_train_set_5['label'] == '도박', '도박', '비도박')
@@ -404,14 +384,11 @@ def binary_classifier_tfidf(df):
             j += 1
         i += 1
 
-
-
     ### 비도박데이터 Bag of words
     spam_train_set_6 = spam_train_set_5[spam_train_set_5['label'] != '도박']
     spam_bow_transformer_6 = cv.fit(spam_train_set_6['docs'])
     spam_docs_bow_6 = spam_bow_transformer_6.transform(spam_train_set_6['docs'])
     spam_docs_test_6 = spam_bow_transformer_6.transform(next_set['docs'])
-
 
     ### 청소년 유해 여부 분류
     harm_label = np.where(spam_train_set_6['label'] == '청소년유해', '청소년유해', '건전')
@@ -429,5 +406,5 @@ def binary_classifier_tfidf(df):
 
     return normal_predictions
 
-print(classification_report(test_set['label'], binary_classifier(test_set)))
 
+print(classification_report(test_set['label'], binary_classifier(test_set)))
